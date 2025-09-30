@@ -83,3 +83,30 @@
 body {
   font-family: var(--font-general);
 }
+
+.content {
+  position: relative;
+  min-height: 100vh;
+  padding: 7.25rem var(--space-4);
+  background-color: var(--color-white);
+  background-image: url("../images/bg-pattern-top-desktop.svg"),
+    url("../images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size: 50%, 75%;
+}
+
+@media (max-width: 55rem) {
+  .content {
+    background-image: url("../images/bg-pattern-top-mobile.svg"),
+      url("../images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 232px, 200% 310px;
+  }
+}
+
+@media (max-width: 36rem) {
+  .content {
+    padding-top: var(--space-11);
+  }
+}
