@@ -182,8 +182,158 @@ body {
   font-size: var(--fs-smd);
 }
 
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.container--first {
+  padding-bottom: var(--space-6);
+}
+
+.container--second {
+  padding: var(--space-4) 0;
+}
+
+.container--third {
+  align-self: end;
+}
+
+.testimonial {
+  --width: 21.875rem;
+  max-width: var(--width);
+  min-height: 14rem;
+  background-color: var(--color-purple-900);
+  border-radius: 8px;
+  padding: var(--space-6);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.testimonial__header {
+  display: flex;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.testimonial__image {
+  display: block;
+  border-radius: 50%;
+}
+
+.testimonial__additional {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial__author {
+  color: var(--color-white);
+  line-height: 100%;
+  font-size: var(--fs-smd);
+  font-weight: 700;
+}
+
+.testimonial__status {
+  color: var(--color-pink-400);
+  line-height: 100%;
+  font-size: var(--fs-smd);
+  font-weight: 400;
+}
+
+.testimonial__description {
+  line-height: 100%;
+  font-size: var(--fs-smd);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+@media (max-width: 61rem) {
+  .social {
+    --width: 38rem;
+  }
+
+  .section-overview {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-7);
+  }
+
+  .overview {
+    max-width: 100%;
+  }
+
+  .ratings__item:nth-of-type(1),
+  .ratings__item:nth-of-type(2) {
+    transform: translateX(0);
+  }
+
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .testimonial {
+    --width: 28.3125rem;
+  }
+
+  .container--first {
+    padding-bottom: 0;
+  }
+
+  .container--second {
+    padding: 0;
+  }
+
+  .container--third {
+    align-self: center;
+  }
+}
+
 @media (max-width: 36rem) {
   .content {
     padding-top: var(--space-11);
+  }
+
+  .social {
+    gap: var(--space-7);
+  }
+
+  .section-overview {
+    gap: var(--space-6);
+  }
+
+  .ratings__item {
+    gap: var(--space-4);
+  }
+
+  .overview__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .ratings {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .testimonial {
+    min-height: auto;
+    --width: auto;
+    width: 100%;
+  }
+
+  .ratings__item {
+    flex-direction: column;
+    width: 100%;
+    min-width: auto;
   }
 }
